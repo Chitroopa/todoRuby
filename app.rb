@@ -11,6 +11,7 @@ end
 
 post('/result') do
   test_todo = ToDo.new(params.fetch('task'))
+  test_todo.save()
   @todo = test_todo.description()
   erb(:result)
 end
