@@ -42,7 +42,7 @@ post('/lists') do
   list = List.new({:name => name , :id=> nil})
   list.save()
   @lists = List.all()
-  erb(:lists)
+  erb(:index)
 end
 
 get("/lists/:id/edit") do
